@@ -3,7 +3,7 @@ CC := gcc
 CFLAGS := -fno-omit-frame-pointer
 
 main: main.o harness.o runtest.o
-	$(CC) -o main main.o harness.o runtest.o -lrt -lpfm
+	$(CC) -o bhive main.o harness.o runtest.o -lrt -lpfm
 
 harness.o: harness.c
 	$(CC) $(CFLAGS) -c -o harness.o harness.c
@@ -15,4 +15,4 @@ runtest.o: runtest.c
 	$(CC) $(CFLAGS) -c -o runtest.o runtest.c -nostdlib
 
 clean:
-	rm -f main main.o harness.o runtest.o
+	rm -f bhive main.o harness.o runtest.o

@@ -271,6 +271,7 @@ void runtest() {
                      : "m"(global_p));
 #endif
     asm __volatile__(
+                     "isb\n\t"
                      "mrs x0, pmevcntr0_el0\n\t"
                      "add %0, x0, #0\n\t"
                      : "=r"(count)
