@@ -1,0 +1,2 @@
+#!/bin/sh
+/sbin/rmmod pmu_el0_cycle_counter || exit 1

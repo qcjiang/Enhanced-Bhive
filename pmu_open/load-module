@@ -1,0 +1,2 @@
+#!/bin/sh
+/sbin/insmod ./arm_pmu/pmu_el0_cycle_counter.ko || exit 1
