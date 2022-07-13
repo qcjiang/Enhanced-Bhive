@@ -338,7 +338,7 @@ int measure(char *code_to_test, unsigned long code_size,
     if (ret == -1) {
       perror("[CHILD] Error protecting test code");
     }
-    printf("\n[CHILD] Test block and tail copied.\n");
+    printf("[CHILD] Test block and tail copied.\n");
 
     if (aux_mem_overlap(runtest_page_start, runtest_page_end)) {
       printf("[CHILD, ERR] Aux. memory and test pages overlap. Move aux. "

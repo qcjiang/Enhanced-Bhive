@@ -7,6 +7,9 @@
 void main(int argc, char **argv) {
     measure_results_t res;
     int count = 500;
+    if(argc > 2){
+        count = atoi(argv[2]);
+    }
     int byte_size = strlen(argv[1]) / 3;
     char * code_tmp[strlen(argv[1]) + 1];
     strcpy(code_tmp, argv[1]);
